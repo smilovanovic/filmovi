@@ -5,16 +5,17 @@ public class OsluskivacBrisanje implements ActionListener {
 
 	private Lista l;
 	private int pozicija;
+	private PanelUnos panelUnos;
 
-	public OsluskivacBrisanje(Lista l, int pozicija) {
-
+	OsluskivacBrisanje(Lista l, int pozicija, PanelUnos pU) {
 		this.l = l;
 		this.pozicija = pozicija;
+		this.panelUnos = pU;
 	}
 
 	public void actionPerformed(ActionEvent e) {
-
 		l.deleteElement(pozicija);
+		this.panelUnos.generateList();
 	}
 
 }
